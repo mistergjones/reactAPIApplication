@@ -11,12 +11,12 @@ import Product from "./Views/Product";
 function App() {
     return (
         <div className="relative pb-10 min-h-screen">
-            <Router>
+            <Router basename={window.location.pathname || ""}>
                 {/* <CounterExample /> */}
                 <Header />
                 <div className="p-3">
                     <Switch>
-                        <Route exact path="/">
+                        <Route exact path="/" component={Home}>
                             <Home />
                         </Route>
                         <Route path="/about">
